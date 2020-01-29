@@ -1,0 +1,104 @@
+﻿@model MediaChill.Models.Film
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+
+
+<h2>Ajouter</h2>
+@using (Html.BeginForm("Index", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    @Html.Label("Title")
+    <br />
+    @Html.Editor("Title");
+    <br />
+    @Html.ValidationMessage("Title")
+    <br />
+    @Html.Label("RealName")
+    <br />
+    @Html.Editor("RealName");
+    <br />
+    @Html.ValidationMessage("RealName")
+    <br />
+    @Html.Label("Genre")
+    <br />
+    @Html.EnumDropDownListFor(
+              film => film.Genre,
+              "selectionnez le genre de film",
+              new { @class = "form-control" })
+
+
+    <br />
+    @Html.ValidationMessage("Genre")
+    <br />
+    @Html.Label("Duration")
+    <br />
+    @Html.Editor("Duration");
+    <br />
+    @Html.ValidationMessage("Duration")
+    <br />
+    @Html.Label("Image")
+    <br />
+    <input type="file" name="file1" />
+    <br />
+    @Html.Label("Video")
+    <br />
+    <input type="file" name="file2" />
+    <br />
+    <input type="submit" id="btnUpload" value="Upload" />
+}
+
+<hr />
+
+<h2>Ajouter</h2>
+@using (Html.BeginForm("Index", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    @Html.Label("Title")
+    <br />
+    @Html.Editor("Title");
+    <br />
+    @Html.ValidationMessage("Title")
+    <br />
+    @Html.Label("RealName")
+    <br />
+    @Html.Editor("RealName");
+    <br />
+    @Html.ValidationMessage("RealName")
+    <br />
+    @Html.Label("Genre")
+    <br />
+    @Html.EnumDropDownListFor(
+              film => film.Genre,
+              "selectionnez le genre de film",
+              new { @class = "form-control" })
+
+
+    <br />
+    @Html.ValidationMessage("Genre")
+    <br />
+    @Html.Label("Duration")
+    <br />
+    @Html.Editor("Duration");
+    <br />
+    @Html.ValidationMessage("Duration")
+    <br />
+    @Html.Label("Image")
+    <br />
+    <input type="file" name="file1" />
+    <br />
+    @Html.Label("Video")
+    <br />
+    <input type="file" name="file2" />
+    <br />
+    <input type="submit" id="btnUpload" value="Upload" />
+}
+
+<hr />
